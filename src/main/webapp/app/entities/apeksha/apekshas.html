@@ -1,0 +1,198 @@
+<div>
+    <h2 data-translate="janasanthwanamApp.apeksha.home.title">Apekshas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="apeksha.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="janasanthwanamApp.apeksha.home.createLabel">
+                        Create new Apeksha
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'janasanthwanamApp.apeksha.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="applicationNumber"><span data-translate="janasanthwanamApp.apeksha.applicationNumber">Application Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="beneficiaryName"><span data-translate="janasanthwanamApp.apeksha.beneficiaryName">Beneficiary Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="district"><span data-translate="janasanthwanamApp.apeksha.district">District</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender"><span data-translate="janasanthwanamApp.apeksha.gender">Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fathersName"><span data-translate="janasanthwanamApp.apeksha.fathersName">Fathers Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="age"><span data-translate="janasanthwanamApp.apeksha.age">Age</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateOfBirth"><span data-translate="janasanthwanamApp.apeksha.dateOfBirth">Date Of Birth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="aadharNumber"><span data-translate="janasanthwanamApp.apeksha.aadharNumber">Aadhar Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rationCardNumber"><span data-translate="janasanthwanamApp.apeksha.rationCardNumber">Ration Card Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rationCardCategory"><span data-translate="janasanthwanamApp.apeksha.rationCardCategory">Ration Card Category</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="caste"><span data-translate="janasanthwanamApp.apeksha.caste">Caste</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="religion"><span data-translate="janasanthwanamApp.apeksha.religion">Religion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="houseName"><span data-translate="janasanthwanamApp.apeksha.houseName">House Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="houseNumber"><span data-translate="janasanthwanamApp.apeksha.houseNumber">House Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tcNumber"><span data-translate="janasanthwanamApp.apeksha.tcNumber">Tc Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="village"><span data-translate="janasanthwanamApp.apeksha.village">Village</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="panchayat"><span data-translate="janasanthwanamApp.apeksha.panchayat">Panchayat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="postOffice"><span data-translate="janasanthwanamApp.apeksha.postOffice">Post Office</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mobileNumber"><span data-translate="janasanthwanamApp.apeksha.mobileNumber">Mobile Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="landLineWithSTD"><span data-translate="janasanthwanamApp.apeksha.landLineWithSTD">Land Line With STD</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pinCode"><span data-translate="janasanthwanamApp.apeksha.pinCode">Pin Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="occupation"><span data-translate="janasanthwanamApp.apeksha.occupation">Occupation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="annualIncome"><span data-translate="janasanthwanamApp.apeksha.annualIncome">Annual Income</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="familyDetails"><span data-translate="janasanthwanamApp.apeksha.familyDetails">Family Details</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="landTotalCent"><span data-translate="janasanthwanamApp.apeksha.landTotalCent">Land Total Cent</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="landThaluk"><span data-translate="janasanthwanamApp.apeksha.landThaluk">Land Thaluk</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="landVillage"><span data-translate="janasanthwanamApp.apeksha.landVillage">Land Village</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="landDistrict"><span data-translate="janasanthwanamApp.apeksha.landDistrict">Land District</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="thaluk"><span data-translate="janasanthwanamApp.apeksha.thaluk">Thaluk</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="requirementPurpose"><span data-translate="janasanthwanamApp.apeksha.requirementPurpose">Requirement Purpose</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="recommendation"><span data-translate="janasanthwanamApp.apeksha.recommendation">Recommendation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="hospitalName"><span data-translate="janasanthwanamApp.apeksha.hospitalName">Hospital Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="treatmentHistory"><span data-translate="janasanthwanamApp.apeksha.treatmentHistory">Treatment History</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="expectedAmount"><span data-translate="janasanthwanamApp.apeksha.expectedAmount">Expected Amount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bankName"><span data-translate="janasanthwanamApp.apeksha.bankName">Bank Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bankBranchName"><span data-translate="janasanthwanamApp.apeksha.bankBranchName">Bank Branch Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bankAccountNumber"><span data-translate="janasanthwanamApp.apeksha.bankAccountNumber">Bank Account Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bankIfscCode"><span data-translate="janasanthwanamApp.apeksha.bankIfscCode">Bank Ifsc Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="additionalDocuments"><span data-translate="janasanthwanamApp.apeksha.additionalDocuments">Additional Documents</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="remarks"><span data-translate="janasanthwanamApp.apeksha.remarks">Remarks</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dateOfApplcation"><span data-translate="janasanthwanamApp.apeksha.dateOfApplcation">Date Of Applcation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeAvailable"><span data-translate="janasanthwanamApp.apeksha.nomineeAvailable">Nominee Available</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeName"><span data-translate="janasanthwanamApp.apeksha.nomineeName">Nominee Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeGender"><span data-translate="janasanthwanamApp.apeksha.nomineeGender">Nominee Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeAge"><span data-translate="janasanthwanamApp.apeksha.nomineeAge">Nominee Age</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeRelationship"><span data-translate="janasanthwanamApp.apeksha.nomineeRelationship">Nominee Relationship</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeHouseName"><span data-translate="janasanthwanamApp.apeksha.nomineeHouseName">Nominee House Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeHouseNumber"><span data-translate="janasanthwanamApp.apeksha.nomineeHouseNumber">Nominee House Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeTcNo"><span data-translate="janasanthwanamApp.apeksha.nomineeTcNo">Nominee Tc No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeVillage"><span data-translate="janasanthwanamApp.apeksha.nomineeVillage">Nominee Village</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeThaluk"><span data-translate="janasanthwanamApp.apeksha.nomineeThaluk">Nominee Thaluk</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineePanchayat"><span data-translate="janasanthwanamApp.apeksha.nomineePanchayat">Nominee Panchayat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineePostOffice"><span data-translate="janasanthwanamApp.apeksha.nomineePostOffice">Nominee Post Office</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineePinCode"><span data-translate="janasanthwanamApp.apeksha.nomineePinCode">Nominee Pin Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeMobileNumber"><span data-translate="janasanthwanamApp.apeksha.nomineeMobileNumber">Nominee Mobile Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeLandLineWithSTD"><span data-translate="janasanthwanamApp.apeksha.nomineeLandLineWithSTD">Nominee Land Line With STD</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeBankName"><span data-translate="janasanthwanamApp.apeksha.nomineeBankName">Nominee Bank Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeBankBranch"><span data-translate="janasanthwanamApp.apeksha.nomineeBankBranch">Nominee Bank Branch</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeBankAccountNumber"><span data-translate="janasanthwanamApp.apeksha.nomineeBankAccountNumber">Nominee Bank Account Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nomineeBankIfscCode"><span data-translate="janasanthwanamApp.apeksha.nomineeBankIfscCode">Nominee Bank Ifsc Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="apeksha in vm.apekshas track by apeksha.id">
+                    <td><a ui-sref="apeksha-detail({id:apeksha.id})">{{apeksha.id}}</a></td>
+                    <td>{{apeksha.applicationNumber}}</td>
+                    <td>{{apeksha.beneficiaryName}}</td>
+                    <td>{{apeksha.district}}</td>
+                    <td>{{apeksha.gender}}</td>
+                    <td>{{apeksha.fathersName}}</td>
+                    <td>{{apeksha.age}}</td>
+                        <td>{{apeksha.dateOfBirth | date:'mediumDate'}}</td>
+                    <td>{{apeksha.aadharNumber}}</td>
+                    <td>{{apeksha.rationCardNumber}}</td>
+                    <td>{{apeksha.rationCardCategory}}</td>
+                    <td>{{apeksha.caste}}</td>
+                    <td>{{apeksha.religion}}</td>
+                    <td>{{apeksha.houseName}}</td>
+                    <td>{{apeksha.houseNumber}}</td>
+                    <td>{{apeksha.tcNumber}}</td>
+                    <td>{{apeksha.village}}</td>
+                    <td>{{apeksha.panchayat}}</td>
+                    <td>{{apeksha.postOffice}}</td>
+                    <td>{{apeksha.mobileNumber}}</td>
+                    <td>{{apeksha.landLineWithSTD}}</td>
+                    <td>{{apeksha.pinCode}}</td>
+                    <td>{{apeksha.occupation}}</td>
+                    <td>{{apeksha.annualIncome}}</td>
+                    <td>{{apeksha.familyDetails}}</td>
+                    <td>{{apeksha.landTotalCent}}</td>
+                    <td>{{apeksha.landThaluk}}</td>
+                    <td>{{apeksha.landVillage}}</td>
+                    <td>{{apeksha.landDistrict}}</td>
+                    <td>{{apeksha.thaluk}}</td>
+                    <td>{{apeksha.requirementPurpose}}</td>
+                    <td>{{apeksha.recommendation}}</td>
+                    <td>{{apeksha.hospitalName}}</td>
+                    <td>{{apeksha.treatmentHistory}}</td>
+                    <td>{{apeksha.expectedAmount}}</td>
+                    <td>{{apeksha.bankName}}</td>
+                    <td>{{apeksha.bankBranchName}}</td>
+                    <td>{{apeksha.bankAccountNumber}}</td>
+                    <td>{{apeksha.bankIfscCode}}</td>
+                    <td>
+                        <a ng-if="apeksha.additionalDocuments" ng-click="vm.openFile(apeksha.additionalDocumentsContentType, apeksha.additionalDocuments)" data-translate="entity.action.open">open</a>
+                        <span ng-if="apeksha.additionalDocuments">{{apeksha.additionalDocumentsContentType}}, {{vm.byteSize(apeksha.additionalDocuments)}}</span>
+                    </td>
+                    <td>{{apeksha.remarks}}</td>
+                        <td>{{apeksha.dateOfApplcation | date:'mediumDate'}}</td>
+                    <td>{{apeksha.nomineeAvailable}}</td>
+                    <td>{{apeksha.nomineeName}}</td>
+                    <td>{{apeksha.nomineeGender}}</td>
+                    <td>{{apeksha.nomineeAge}}</td>
+                    <td>{{apeksha.nomineeRelationship}}</td>
+                    <td>{{apeksha.nomineeHouseName}}</td>
+                    <td>{{apeksha.nomineeHouseNumber}}</td>
+                    <td>{{apeksha.nomineeTcNo}}</td>
+                    <td>{{apeksha.nomineeVillage}}</td>
+                    <td>{{apeksha.nomineeThaluk}}</td>
+                    <td>{{apeksha.nomineePanchayat}}</td>
+                    <td>{{apeksha.nomineePostOffice}}</td>
+                    <td>{{apeksha.nomineePinCode}}</td>
+                    <td>{{apeksha.nomineeMobileNumber}}</td>
+                    <td>{{apeksha.nomineeLandLineWithSTD}}</td>
+                    <td>{{apeksha.nomineeBankName}}</td>
+                    <td>{{apeksha.nomineeBankBranch}}</td>
+                    <td>{{apeksha.nomineeBankAccountNumber}}</td>
+                    <td>{{apeksha.nomineeBankIfscCode}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="apeksha-detail({id:apeksha.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="apeksha.edit({id:apeksha.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="apeksha.delete({id:apeksha.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

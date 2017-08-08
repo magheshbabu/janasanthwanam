@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "സ്വാഗതം, ജനസാന്ത്വനം!",
+        "subtitle": "ഇതു നിങ്ങളുടെ ഹോം പേജ് ആകുന്നു",
+        "logged": {
+            "message": "നിങ്ങളുടെ യുസര്‍ \"{{username}}\"."
+        },
+        "question": ":",
+        "link": {
+            "homepage": "",
+            "stackoverflow": "",
+            "bugtracker": "",
+            "chat": "",
+            "follow": ""
+        },
+        "like": "",
+        "github": ""
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Welcome, Janasanthawanam!",
+        "subtitle": "This is your homepage",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": ":",
+        "link": {
+            "homepage": "",
+            "stackoverflow": "",
+            "bugtracker": "",
+            "chat": "",
+            "follow": ""
+        },
+        "like": "",
+        "github": ""
+    }
+}

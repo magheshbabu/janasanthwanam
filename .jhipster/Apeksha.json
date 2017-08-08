@@ -1,0 +1,294 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "applicationNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "beneficiaryName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "district",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fathersName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "aadharNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rationCardNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rationCardCategory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "caste",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "religion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "houseName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "houseNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tcNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "village",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "panchayat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postOffice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobileNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "landLineWithSTD",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pinCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "occupation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "annualIncome",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "familyDetails",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landTotalCent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landThaluk",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landVillage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landDistrict",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thaluk",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requirementPurpose",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "recommendation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hospitalName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "treatmentHistory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expectedAmount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "bankName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankBranchName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankAccountNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankIfscCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "additionalDocuments",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateOfApplcation",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "nomineeAvailable",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeGender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeAge",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nomineeRelationship",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeHouseName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeHouseNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeTcNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeVillage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeThaluk",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineePanchayat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineePostOffice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineePinCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeMobileNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeLandLineWithSTD",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeBankName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeBankBranch",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeBankAccountNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nomineeBankIfscCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170801173123",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "apeksha",
+    "pagination": "pagination"
+}
